@@ -251,6 +251,7 @@ class LangchainAgent(AgentBase):
                 memory=memory,
                 return_intermediate_steps=True,
                 verbose=True,
+                max_iterations=config("AGENT_MAX_ITERATIONS", 3),
             )
             return agent
         else:
